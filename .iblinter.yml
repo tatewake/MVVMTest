@@ -1,0 +1,22 @@
+enabled_rules:
+  - custom_class_name
+  - relative_to_margin
+  - misplaced
+  - enable_autolayout
+  - duplicate_constraint
+  - duplicate_id
+  - storyboard_viewcontroller_id
+  - stackview_backgroundcolor
+  - image_resources
+  - ambiguous
+  - reuse_identifier
+  - color_resources
+disabled_rules:
+  - view_as_device
+  - use_trait_collections
+  - custom_module
+  - use_base_class
+view_as_device_rule:
+  device_id: retina6_7
+excluded:
+  - Pods

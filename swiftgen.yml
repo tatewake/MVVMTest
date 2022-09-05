@@ -1,0 +1,19 @@
+input_dir: MVVMTest
+output_dir: MVVMTest
+
+xcassets:
+  inputs:
+    - Resource/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      params:
+        forceProvidesNamespaces: true
+      output: Source/Generated/XCAssets+Generated.swift
+ib:
+  inputs:
+    - Resource/Base.lproj/Main.storyboard
+  outputs:
+    - templateName: scenes-swift5
+      output: Source/Generated/Scenes+Generated.swift
+    - templateName: segues-swift5
+      output: Source/Generated/Segues+Generated.swift

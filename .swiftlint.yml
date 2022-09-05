@@ -1,0 +1,24 @@
+disabled_rules:
+- force_cast
+- identifier_name
+- trailing_whitespace
+- line_length
+- type_body_length
+- type_name
+- shorthand_operator
+- cyclomatic_complexity
+- file_length
+- large_tuple
+- function_body_length
+- force_try
+- statement_position
+- function_parameter_count
+- colon
+- trailing_comma
+- nesting
+- no_fallthrough_only
+- opening_brace
+
+excluded:
+- Pods
+- MVVMTest/Source/Generated

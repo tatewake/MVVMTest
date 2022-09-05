@@ -1,0 +1,28 @@
+PODS:
+  - IBLinter (0.5.0)
+  - SwiftFormat/CLI (0.49.18)
+  - SwiftGen (6.6.2)
+  - SwiftLint (0.49.1)
+
+DEPENDENCIES:
+  - IBLinter (~> 0.5.0)
+  - SwiftFormat/CLI (~> 0.49.18)
+  - SwiftGen (~> 6.6.2)
+  - SwiftLint (~> 0.49.1)
+
+SPEC REPOS:
+  trunk:
+    - IBLinter
+    - SwiftFormat
+    - SwiftGen
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  IBLinter: 7d28cbb7b579ca80690b56f6c8d22092a672967c
+  SwiftFormat: 2402d29b26746f169cce5454d5af88314cbb2e35
+  SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
+  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
+
+PODFILE CHECKSUM: a680bafc17b602e84df23e78102a088460d91a9e
+
+COCOAPODS: 1.11.3
