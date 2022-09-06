@@ -2,25 +2,27 @@ import Cocoa
 
 class ViewController: NSViewController {
     @IBOutlet private var textView: NSTextView!
+    private var viewModel = ViewModel()
 
-    var document: Document {
-        let wc = (windowController as! WindowController)
-        return wc.document as! Document
-    }
-}
-
-extension ViewController: ModelDelegate {
-    func initialize() {
-        textView.string = document.model.getContentString()
+    var document: Document? {
+        return (windowController as? WindowController)?.document as? Document
     }
 
-    func stringChanged() {
-        textView.string = document.model.getContentString()
+    override func viewWillAppear() {
+        viewModel.contentString.bind { [self] in
+            textView.string = $0
+        }
+
+        document?.model.addDelegate(delegate: viewModel)
+    }
+
+    deinit {
+        document?.model.removeDelegate(delegate: viewModel)
     }
 }
 
 extension ViewController: NSTextViewDelegate {
     func textDidChange(_: Notification) {
-        (windowController as! WindowController).setContentString(contentString: textView.string)
+        (windowController as? WindowController)?.setContentString(contentString: textView.string)
     }
 }

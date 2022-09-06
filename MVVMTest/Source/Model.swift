@@ -1,11 +1,11 @@
 import Cocoa
 
 protocol ModelDelegate: AnyObject {
-    func initialize()
-    func stringChanged()
+    func initialize(contentString: String)
+    func stringChanged(contentString: String)
 }
 
-class Model: NSObject {
+class Model {
     private var contentString = ""
     private var delegates = MulticastDelegate<ModelDelegate>()
 
@@ -16,7 +16,7 @@ class Model: NSObject {
     func addDelegate(delegate: ModelDelegate) {
         delegates.add(delegate)
 
-        delegate.initialize()
+        delegate.initialize(contentString: contentString)
     }
 
     func removeDelegate(delegate: ModelDelegate) {
@@ -38,6 +38,6 @@ class Model: NSObject {
     func setContentString(contentString: String) {
         self.contentString = contentString
 
-        delegates.invoke { $0.stringChanged() }
+        delegates.invoke { $0.stringChanged(contentString: contentString) }
     }
 }
