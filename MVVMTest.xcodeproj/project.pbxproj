@@ -107,11 +107,9 @@
 				00FD519128C6D4C900AE36E9 /* Extensions */,
 				00FD519528C6F6D000AE36E9 /* Utility */,
 				001DB91228C5E122006190FF /* AppDelegate.swift */,
-				001DB91428C5E122006190FF /* ViewController.swift */,
-				00FD518A28C6C29E00AE36E9 /* WindowController.swift */,
-				001DB91628C5E122006190FF /* Document.swift */,
-				00FD518F28C6C38000AE36E9 /* Model.swift */,
-				00FD519C28C7306100AE36E9 /* ViewModel.swift */,
+				00FD519F28C74AB200AE36E9 /* Controller */,
+				00FD51A028C74AC600AE36E9 /* Model */,
+				00FD51A128C74AD500AE36E9 /* ViewModel */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -158,6 +156,32 @@
 				00FD519628C6F6EE00AE36E9 /* MulticastDelegate.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		00FD519F28C74AB200AE36E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				001DB91628C5E122006190FF /* Document.swift */,
+				00FD518A28C6C29E00AE36E9 /* WindowController.swift */,
+				001DB91428C5E122006190FF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		00FD51A028C74AC600AE36E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00FD518F28C6C38000AE36E9 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00FD51A128C74AD500AE36E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00FD519C28C7306100AE36E9 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		87FDCD72C3923577C06D591C /* Pods */ = {
@@ -506,7 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PU2JRNTG54;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MVVMTest/Info.plist;
@@ -518,7 +542,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tatemode.MVVMTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MVVMTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -536,7 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PU2JRNTG54;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MVVMTest/Info.plist;
@@ -548,7 +572,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tatemode.MVVMTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MVVMTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
