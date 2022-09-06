@@ -1,23 +1,26 @@
 import Cocoa
 
 class ViewController: NSViewController {
-    @IBOutlet var textView: NSTextView!
+    @IBOutlet private var textView: NSTextView!
 
-    override func viewWillAppear() {
-        super.viewWillAppear()
+    var document: Document {
+        let wc = (windowController as! WindowController)
+        return wc.document as! Document
+    }
+}
 
-        (windowController as! WindowController).finishLoading()
+extension ViewController: ModelDelegate {
+    func initialize() {
+        textView.string = document.model.getContentString()
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    func stringChanged() {
+        textView.string = document.model.getContentString()
     }
+}
 
-    override var representedObject: Any? {
-        didSet {
-            // Update the view, if already loaded.
-        }
+extension ViewController: NSTextViewDelegate {
+    func textDidChange(_: Notification) {
+        (windowController as! WindowController).setContentString(contentString: textView.string)
     }
 }

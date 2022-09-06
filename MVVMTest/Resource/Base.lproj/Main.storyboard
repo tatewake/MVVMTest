@@ -694,12 +694,37 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="window.shadowedContentViewController" id="nsd-lR-9xd"/>
+                        <segue destination="CND-IV-mBZ" kind="relationship" relationship="window.shadowedContentViewController" id="jDb-BX-eOc"/>
                     </connections>
                 </windowController>
                 <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--SplitVC-->
+        <scene sceneID="rlA-gY-qpy">
+            <objects>
+                <splitViewController storyboardIdentifier="SplitVC" id="CND-IV-mBZ" customClass="SplitVC" customModule="MVVMTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="GoT-LH-o1v"/>
+                        <splitViewItem id="riF-hP-OW2"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="q5B-nT-f5E">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="CND-IV-mBZ" id="ttj-5c-VeB"/>
+                        </connections>
+                    </splitView>
+                    <connections>
+                        <outlet property="splitView" destination="q5B-nT-f5E" id="7z0-0D-vaX"/>
+                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="splitItems" id="DWc-MC-HMG"/>
+                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="splitItems" id="Nu3-fQ-TLv"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="mqd-xE-yc2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="659"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -723,6 +748,9 @@
                                             <size key="minSize" width="440" height="230"/>
                                             <size key="maxSize" width="480" height="10000000"/>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="fBA-7g-ozs"/>
+                                            </connections>
                                         </textView>
                                     </subviews>
                                 </clipView>
@@ -749,7 +777,10 @@
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="680" y="719"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nu3-fQ-TLv"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -1,13 +1,14 @@
 import Cocoa
 
 class WindowController: NSWindowController {
-    var vc: ViewController {
-        return contentViewController as! ViewController
+    var vc: SplitVC {
+        return contentViewController as! SplitVC
     }
 
     func finishLoading() {
         if let document = document as? Document {
-            vc.textView.string = document.model.contentString
+            document.model.addDelegate(delegate: vc)
+            vc.stringChanged()
         }
     }
 
@@ -26,12 +27,16 @@ class WindowController: NSWindowController {
 
         sharedInit()
     }
-}
 
-extension WindowController: NSTextViewDelegate {
-    func textDidChange(_: Notification) {
+    deinit {
         if let document = document as? Document {
-            document.model.contentString = vc.textView.string
+            document.model.removeDelegate(delegate: vc)
+        }
+    }
+
+    func setContentString(contentString: String) {
+        if let document = document as? Document {
+            document.model.setContentString(contentString: contentString)
             document.updateChangeCount(.changeDone)
             setDocumentEdited(true)
         }
