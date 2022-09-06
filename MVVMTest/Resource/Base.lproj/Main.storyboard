@@ -701,16 +701,41 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--SplitVC-->
+        <!--Split View Controller-->
+        <scene sceneID="7Zr-V6-bll">
+            <objects>
+                <splitViewController id="vXk-eM-7GR" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="hf7-Iv-b5o"/>
+                        <splitViewItem id="Rgp-4k-7OJ"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" id="pSP-v1-K6a">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="vXk-eM-7GR" id="MR7-29-9aL"/>
+                        </connections>
+                    </splitView>
+                    <connections>
+                        <outlet property="splitView" destination="pSP-v1-K6a" id="M0h-KU-pSk"/>
+                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="splitItems" id="Q9M-pv-nXy"/>
+                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="splitItems" id="3Ze-rr-yUp"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="CtY-4C-y3H" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="1137"/>
+        </scene>
+        <!--Split View Controller-->
         <scene sceneID="rlA-gY-qpy">
             <objects>
-                <splitViewController storyboardIdentifier="SplitVC" id="CND-IV-mBZ" customClass="SplitVC" customModule="MVVMTest" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController id="CND-IV-mBZ" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem id="GoT-LH-o1v"/>
-                        <splitViewItem id="riF-hP-OW2"/>
+                        <splitViewItem id="WjW-dG-Cs1"/>
+                        <splitViewItem id="Vnn-k9-SNE"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="q5B-nT-f5E">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="527" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <outlet property="delegate" destination="CND-IV-mBZ" id="ttj-5c-VeB"/>
@@ -718,8 +743,8 @@
                     </splitView>
                     <connections>
                         <outlet property="splitView" destination="q5B-nT-f5E" id="7z0-0D-vaX"/>
-                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="splitItems" id="DWc-MC-HMG"/>
-                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="splitItems" id="Nu3-fQ-TLv"/>
+                        <segue destination="vXk-eM-7GR" kind="relationship" relationship="splitItems" id="LP4-hO-hjd"/>
+                        <segue destination="vXk-eM-7GR" kind="relationship" relationship="splitItems" id="DRm-Sm-xDE"/>
                     </connections>
                 </splitViewController>
                 <customObject id="mqd-xE-yc2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -781,6 +806,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Nu3-fQ-TLv"/>
+        <segue reference="Q9M-pv-nXy"/>
+        <segue reference="DRm-Sm-xDE"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,7 +10,9 @@ class ViewController: NSViewController {
 
     override func viewWillAppear() {
         viewModel.contentString.bind { [self] in
-            textView.string = $0
+            if textView.string != $0 {
+                textView.string = $0
+            }
         }
 
         document?.model.addDelegate(delegate: viewModel)
