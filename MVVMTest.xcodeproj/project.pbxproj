@@ -15,6 +15,9 @@
 		001DB93428C5E839006190FF /* Scenes+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001DB93128C5E838006190FF /* Scenes+Generated.swift */; };
 		001DB93528C5E839006190FF /* Segues+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001DB93228C5E838006190FF /* Segues+Generated.swift */; };
 		001DB93628C5E839006190FF /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001DB93328C5E839006190FF /* XCAssets+Generated.swift */; };
+		00FD518B28C6C29E00AE36E9 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD518A28C6C29E00AE36E9 /* WindowController.swift */; };
+		00FD519028C6C38000AE36E9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD518F28C6C38000AE36E9 /* Model.swift */; };
+		00FD519428C6D4F500AE36E9 /* NSViewController+windowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD519328C6D4F500AE36E9 /* NSViewController+windowController.swift */; };
 		6A9D04A63BD72AD209D679E3 /* libPods-MVVMTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A548CA280583EAE2B47678 /* libPods-MVVMTest.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		001DB93128C5E838006190FF /* Scenes+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scenes+Generated.swift"; sourceTree = "<group>"; };
 		001DB93228C5E838006190FF /* Segues+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Segues+Generated.swift"; sourceTree = "<group>"; };
 		001DB93328C5E839006190FF /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		00FD518A28C6C29E00AE36E9 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		00FD518F28C6C38000AE36E9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		00FD519328C6D4F500AE36E9 /* NSViewController+windowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSViewController+windowController.swift"; sourceTree = "<group>"; };
 		01A548CA280583EAE2B47678 /* libPods-MVVMTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A38E9AC389B63E4602E9F8 /* Pods-MVVMTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTest.release.xcconfig"; path = "Target Support Files/Pods-MVVMTest/Pods-MVVMTest.release.xcconfig"; sourceTree = "<group>"; };
 		DDAE9B017FD6CA8BDED9FCC3 /* Pods-MVVMTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTest.debug.xcconfig"; path = "Target Support Files/Pods-MVVMTest/Pods-MVVMTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,10 +97,13 @@
 		001DB92A28C5E1F2006190FF /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				00FD519128C6D4C900AE36E9 /* Extensions */,
 				001DB92B28C5E201006190FF /* Generated */,
 				001DB91228C5E122006190FF /* AppDelegate.swift */,
 				001DB91428C5E122006190FF /* ViewController.swift */,
+				00FD518A28C6C29E00AE36E9 /* WindowController.swift */,
 				001DB91628C5E122006190FF /* Document.swift */,
+				00FD518F28C6C38000AE36E9 /* Model.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -116,6 +125,22 @@
 				001DB91A28C5E123006190FF /* Main.storyboard */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		00FD519128C6D4C900AE36E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00FD519228C6D4D200AE36E9 /* AppKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		00FD519228C6D4D200AE36E9 /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				00FD519328C6D4F500AE36E9 /* NSViewController+windowController.swift */,
+			);
+			path = AppKit;
 			sourceTree = "<group>";
 		};
 		87FDCD72C3923577C06D591C /* Pods */ = {
@@ -313,10 +338,13 @@
 			files = (
 				001DB93428C5E839006190FF /* Scenes+Generated.swift in Sources */,
 				001DB93528C5E839006190FF /* Segues+Generated.swift in Sources */,
+				00FD519428C6D4F500AE36E9 /* NSViewController+windowController.swift in Sources */,
 				001DB91528C5E122006190FF /* ViewController.swift in Sources */,
+				00FD518B28C6C29E00AE36E9 /* WindowController.swift in Sources */,
 				001DB93628C5E839006190FF /* XCAssets+Generated.swift in Sources */,
 				001DB91328C5E122006190FF /* AppDelegate.swift in Sources */,
 				001DB91728C5E122006190FF /* Document.swift in Sources */,
+				00FD519028C6C38000AE36E9 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

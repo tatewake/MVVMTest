@@ -1,6 +1,14 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    @IBOutlet var textView: NSTextView!
+
+    override func viewWillAppear() {
+        super.viewWillAppear()
+
+        (windowController as! WindowController).finishLoading()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
