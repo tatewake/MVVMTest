@@ -2,24 +2,14 @@ import Cocoa
 
 class ViewController: NSViewController {
     @IBOutlet private var textView: NSTextView!
-    private var viewModel = ViewModel()
+    private var viewModel: ViewModel?
 
     var document: Document? {
         return (windowController as? WindowController)?.document as? Document
     }
 
     override func viewWillAppear() {
-        viewModel.contentString.bind { [self] in
-            if textView.string != $0 {
-                textView.string = $0
-            }
-        }
-
-        document?.model.addDelegate(delegate: viewModel)
-    }
-
-    deinit {
-        document?.model.removeDelegate(delegate: viewModel)
+        viewModel = ViewModel(modelProxy: document?.model, textView: textView)
     }
 }
 

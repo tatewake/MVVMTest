@@ -5,22 +5,23 @@ protocol ModelDelegate: AnyObject {
     func stringChanged(contentString: String)
 }
 
+protocol ModelProxy: AnyObject {
+    var contentString: String { get set }
+    var delegates: MulticastDelegate<ModelDelegate> { get }
+
+    func requestInitialize(delegate: ModelDelegate)
+}
+
 class Model {
-    private var contentString = ""
-    private var delegates = MulticastDelegate<ModelDelegate>()
+    internal var delegates = MulticastDelegate<ModelDelegate>()
+    internal var contentString = "" {
+        didSet {
+            delegates.invoke { $0.stringChanged(contentString: contentString) }
+        }
+    }
 
     public init(contentString: String) {
         self.contentString = contentString
-    }
-
-    func addDelegate(delegate: ModelDelegate) {
-        delegates.add(delegate)
-
-        delegate.initialize(contentString: contentString)
-    }
-
-    func removeDelegate(delegate: ModelDelegate) {
-        delegates.remove(delegate)
     }
 
     func read(from data: Data) {
@@ -30,14 +31,10 @@ class Model {
     func data() -> Data? {
         return contentString.data(using: .utf8)
     }
+}
 
-    func getContentString() -> String {
-        return contentString
-    }
-
-    func setContentString(contentString: String) {
-        self.contentString = contentString
-
-        delegates.invoke { $0.stringChanged(contentString: contentString) }
+extension Model: ModelProxy {
+    func requestInitialize(delegate: ModelDelegate) {
+        delegate.initialize(contentString: contentString)
     }
 }

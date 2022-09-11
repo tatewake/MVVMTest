@@ -19,14 +19,14 @@ class WindowController: NSWindowController {
 
     func setContentString(contentString: String) {
         if let document = document as? Document {
-            let undoContentString = document.model.getContentString()
+            let undoContentString = document.model.contentString
 
             document.undoManager?.setActionName("change text")
             document.undoManager?.registerUndo(withTarget: self, handler: { _ in
                 self.setContentString(contentString: undoContentString)
             })
 
-            document.model.setContentString(contentString: contentString)
+            document.model.contentString = contentString
         }
     }
 }
