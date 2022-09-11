@@ -15,6 +15,6 @@ class ViewController: NSViewController {
 
 extension ViewController: NSTextViewDelegate {
     func textDidChange(_: Notification) {
-        (windowController as? WindowController)?.setContentString(contentString: textView.string)
+        (windowController as? WindowController)?.commitChangeText(contentString: textView.string)
     }
 }
