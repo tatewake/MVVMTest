@@ -1,6 +1,18 @@
 import Cocoa
 
 class WindowController: NSWindowController {
+    private var outerSplitVC: NSSplitViewController {
+        return contentViewController as! NSSplitViewController
+    }
+
+    private var innerSplitVC: NSSplitViewController {
+        return outerSplitVC.splitViewItems.first!.viewController as! NSSplitViewController
+    }
+
+    private var firstVC: ViewController {
+        return innerSplitVC.splitViewItems.first!.viewController as! ViewController
+    }
+
     func sharedInit() {
         shouldCascadeWindows = true
     }
@@ -15,6 +27,10 @@ class WindowController: NSWindowController {
         super.init(window: window)
 
         sharedInit()
+    }
+
+    override func windowDidLoad() {
+        firstVC.becomeFirstResponder()
     }
 
     func commitChangeText(contentString: String) {

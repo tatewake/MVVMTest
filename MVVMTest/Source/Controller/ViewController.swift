@@ -15,6 +15,19 @@ class ViewController: NSViewController {
     override func viewWillAppear() {
         viewModel = ViewModel(modelProxy: document?.model, textView: textView, transform: transform)
     }
+
+    func textView(_ textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+        switch commandSelector {
+        case #selector(NSResponder.insertTab(_:)):
+            textView.window?.selectNextKeyView(nil)
+            return true
+        case #selector(NSResponder.insertBacktab(_:)):
+            textView.window?.selectPreviousKeyView(nil)
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 extension ViewController: NSTextViewDelegate {
