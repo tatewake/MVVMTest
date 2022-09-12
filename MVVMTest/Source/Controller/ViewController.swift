@@ -8,13 +8,17 @@ class ViewController: NSViewController {
         return (windowController as? WindowController)?.document as? Document
     }
 
+    func transform(_ string: String) -> String {
+        return string
+    }
+
     override func viewWillAppear() {
-        viewModel = ViewModel(modelProxy: document?.model, textView: textView)
+        viewModel = ViewModel(modelProxy: document?.model, textView: textView, transform: transform)
     }
 }
 
 extension ViewController: NSTextViewDelegate {
     func textDidChange(_: Notification) {
-        (windowController as? WindowController)?.commitChangeText(contentString: textView.string)
+        (windowController as? WindowController)?.commitChangeText(contentString: transform(textView.string))
     }
 }

@@ -4,10 +4,12 @@ class ViewModel {
     private weak var modelProxy: ModelProxy?
     private var contentString = Observable<String>("")
 
-    init(modelProxy: ModelProxy?, textView: NSTextView) {
+    init(modelProxy: ModelProxy?, textView: NSTextView, transform: @escaping (String) -> String) {
         contentString.bind {
-            if textView.string != $0 {
-                textView.string = $0
+            let newValue = transform($0)
+
+            if textView.string != newValue {
+                textView.string = newValue
             }
         }
 

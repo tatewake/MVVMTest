@@ -15,6 +15,9 @@
 		001DB93428C5E839006190FF /* Scenes+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001DB93128C5E838006190FF /* Scenes+Generated.swift */; };
 		001DB93528C5E839006190FF /* Segues+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001DB93228C5E838006190FF /* Segues+Generated.swift */; };
 		001DB93628C5E839006190FF /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001DB93328C5E839006190FF /* XCAssets+Generated.swift */; };
+		0067812128CF1B67009C3E49 /* ReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0067811E28CF1B67009C3E49 /* ReverseViewController.swift */; };
+		0067812228CF1B67009C3E49 /* OppositeCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0067811F28CF1B67009C3E49 /* OppositeCaseViewController.swift */; };
+		0067812328CF1B67009C3E49 /* ROT13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0067812028CF1B67009C3E49 /* ROT13ViewController.swift */; };
 		00FD518B28C6C29E00AE36E9 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD518A28C6C29E00AE36E9 /* WindowController.swift */; };
 		00FD519028C6C38000AE36E9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD518F28C6C38000AE36E9 /* Model.swift */; };
 		00FD519428C6D4F500AE36E9 /* NSViewController+windowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD519328C6D4F500AE36E9 /* NSViewController+windowController.swift */; };
@@ -42,6 +45,9 @@
 		001DB93128C5E838006190FF /* Scenes+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scenes+Generated.swift"; sourceTree = "<group>"; };
 		001DB93228C5E838006190FF /* Segues+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Segues+Generated.swift"; sourceTree = "<group>"; };
 		001DB93328C5E839006190FF /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		0067811E28CF1B67009C3E49 /* ReverseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseViewController.swift; sourceTree = "<group>"; };
+		0067811F28CF1B67009C3E49 /* OppositeCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OppositeCaseViewController.swift; sourceTree = "<group>"; };
+		0067812028CF1B67009C3E49 /* ROT13ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROT13ViewController.swift; sourceTree = "<group>"; };
 		00FD518A28C6C29E00AE36E9 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		00FD518F28C6C38000AE36E9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		00FD519328C6D4F500AE36E9 /* NSViewController+windowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSViewController+windowController.swift"; sourceTree = "<group>"; };
@@ -164,6 +170,9 @@
 				001DB91628C5E122006190FF /* Document.swift */,
 				00FD518A28C6C29E00AE36E9 /* WindowController.swift */,
 				001DB91428C5E122006190FF /* ViewController.swift */,
+				0067811E28CF1B67009C3E49 /* ReverseViewController.swift */,
+				0067811F28CF1B67009C3E49 /* OppositeCaseViewController.swift */,
+				0067812028CF1B67009C3E49 /* ROT13ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -377,16 +386,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0067812228CF1B67009C3E49 /* OppositeCaseViewController.swift in Sources */,
 				001DB93428C5E839006190FF /* Scenes+Generated.swift in Sources */,
 				001DB93528C5E839006190FF /* Segues+Generated.swift in Sources */,
 				00FD519428C6D4F500AE36E9 /* NSViewController+windowController.swift in Sources */,
 				001DB91528C5E122006190FF /* ViewController.swift in Sources */,
 				00FD518B28C6C29E00AE36E9 /* WindowController.swift in Sources */,
 				00FD519D28C7306100AE36E9 /* ViewModel.swift in Sources */,
+				0067812128CF1B67009C3E49 /* ReverseViewController.swift in Sources */,
 				001DB93628C5E839006190FF /* XCAssets+Generated.swift in Sources */,
 				001DB91328C5E122006190FF /* AppDelegate.swift in Sources */,
 				00FD519728C6F6EE00AE36E9 /* MulticastDelegate.swift in Sources */,
 				00FD519B28C7304500AE36E9 /* Observable.swift in Sources */,
+				0067812328CF1B67009C3E49 /* ROT13ViewController.swift in Sources */,
 				001DB91728C5E122006190FF /* Document.swift in Sources */,
 				00FD519028C6C38000AE36E9 /* Model.swift in Sources */,
 			);
