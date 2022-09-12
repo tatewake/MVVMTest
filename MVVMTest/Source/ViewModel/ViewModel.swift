@@ -4,7 +4,7 @@ class ViewModel {
     private weak var modelProxy: ModelProxy?
     private var contentString = Observable<String>("")
 
-    init(modelProxy: ModelProxy?, textView: NSTextView, transform: @escaping (String) -> String) {
+    func configure(modelProxy: ModelProxy?, textView: NSTextView, transform: @escaping (String) -> String) {
         contentString.bind {
             let newValue = transform($0)
 

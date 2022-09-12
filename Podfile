@@ -1,6 +1,7 @@
 platform :macos, '12.3'
 
 def shared_pods
+    pod 'Periphery', '~> 2.9.0'
 	pod 'SwiftFormat/CLI', '~> 0.49.18'
     pod 'SwiftGen', '~> 6.6.2'
     pod 'SwiftLint', '~> 0.49.1'

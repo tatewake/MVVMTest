@@ -42,7 +42,7 @@ class WindowController: NSWindowController {
                 self.commitChangeText(contentString: undoContentString)
             })
 
-            document.model.contentString = contentString
+            (document.model as ModelProxy).contentString = contentString
         }
     }
 }

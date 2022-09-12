@@ -1,0 +1,9 @@
+workspace: MVVMTest.xcworkspace/
+retain_objc_accessible: false
+schemes:
+- MVVMTest
+targets:
+- MVVMTest
+report_exclude:
+- MVVMTest/Source/Extensions/AppKit/*.swift
+- MVVMTest/Source/Generated/*.swift

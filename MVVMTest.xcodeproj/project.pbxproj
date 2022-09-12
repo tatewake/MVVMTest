@@ -6,6 +6,20 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0067812428CF2CC5009C3E49 /* MVVMTest Show Unused Code */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0067812728CF2CC5009C3E49 /* Build configuration list for PBXAggregateTarget "MVVMTest Show Unused Code" */;
+			buildPhases = (
+				0067812828CF2CCA009C3E49 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "MVVMTest Show Unused Code";
+			productName = "MVVMTest Show Unused Code";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		001DB91328C5E122006190FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001DB91228C5E122006190FF /* AppDelegate.swift */; };
 		001DB91528C5E122006190FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001DB91428C5E122006190FF /* ViewController.swift */; };
@@ -48,6 +62,7 @@
 		0067811E28CF1B67009C3E49 /* ReverseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseViewController.swift; sourceTree = "<group>"; };
 		0067811F28CF1B67009C3E49 /* OppositeCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OppositeCaseViewController.swift; sourceTree = "<group>"; };
 		0067812028CF1B67009C3E49 /* ROT13ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROT13ViewController.swift; sourceTree = "<group>"; };
+		0067812928CF2D05009C3E49 /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .periphery.yml; sourceTree = "<group>"; };
 		00FD518A28C6C29E00AE36E9 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		00FD518F28C6C38000AE36E9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		00FD519328C6D4F500AE36E9 /* NSViewController+windowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSViewController+windowController.swift"; sourceTree = "<group>"; };
@@ -76,6 +91,7 @@
 			children = (
 				001DB92928C5E19C006190FF /* .gitignore */,
 				001DB92528C5E19C006190FF /* .iblinter.yml */,
+				0067812928CF2D05009C3E49 /* .periphery.yml */,
 				001DB92428C5E19C006190FF /* .swiftformat */,
 				001DB92628C5E19C006190FF /* .swiftlint.yml */,
 				001DB92728C5E19C006190FF /* Podfile */,
@@ -248,6 +264,9 @@
 					001DB90E28C5E122006190FF = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
+					0067812428CF2CC5009C3E49 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 				};
 			};
 			buildConfigurationList = 001DB90A28C5E122006190FF /* Build configuration list for PBXProject "MVVMTest" */;
@@ -264,6 +283,7 @@
 			projectRoot = "";
 			targets = (
 				001DB90E28C5E122006190FF /* MVVMTest */,
+				0067812428CF2CC5009C3E49 /* MVVMTest Show Unused Code */,
 			);
 		};
 /* End PBXProject section */
@@ -356,6 +376,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/IBLinter/bin/iblinter\"\n";
+		};
+		0067812828CF2CCA009C3E49 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"Pods/Periphery/periphery\" scan --format xcode\n";
 		};
 		BA032106FF53D9952C671794 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -591,6 +629,24 @@
 			};
 			name = Release;
 		};
+		0067812528CF2CC5009C3E49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PU2JRNTG54;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0067812628CF2CC5009C3E49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PU2JRNTG54;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -608,6 +664,15 @@
 			buildConfigurations = (
 				001DB92228C5E123006190FF /* Debug */,
 				001DB92328C5E123006190FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0067812728CF2CC5009C3E49 /* Build configuration list for PBXAggregateTarget "MVVMTest Show Unused Code" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0067812528CF2CC5009C3E49 /* Debug */,
+				0067812628CF2CC5009C3E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

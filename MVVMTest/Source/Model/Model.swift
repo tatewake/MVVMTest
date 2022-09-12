@@ -6,8 +6,8 @@ protocol ModelDelegate: AnyObject {
 }
 
 protocol ModelProxy: AnyObject {
-    var contentString: String { get set }
     var delegates: MulticastDelegate<ModelDelegate> { get }
+    var contentString: String { get set }
 
     func requestInitialize(delegate: ModelDelegate)
 }
@@ -20,7 +20,7 @@ class Model {
         }
     }
 
-    public init(contentString: String) {
+    init(contentString: String) {
         self.contentString = contentString
     }
 

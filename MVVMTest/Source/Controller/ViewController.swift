@@ -2,7 +2,7 @@ import Cocoa
 
 class ViewController: NSViewController {
     @IBOutlet private var textView: NSTextView!
-    private var viewModel: ViewModel?
+    private var viewModel = ViewModel()
 
     var document: Document? {
         return (windowController as? WindowController)?.document as? Document
@@ -13,7 +13,7 @@ class ViewController: NSViewController {
     }
 
     override func viewWillAppear() {
-        viewModel = ViewModel(modelProxy: document?.model, textView: textView, transform: transform)
+        viewModel.configure(modelProxy: document?.model, textView: textView, transform: transform)
     }
 
     func textView(_ textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
