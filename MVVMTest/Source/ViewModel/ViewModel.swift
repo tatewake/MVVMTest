@@ -2,7 +2,7 @@ import Cocoa
 
 class ViewModel {
     private weak var modelProxy: ModelProxy?
-    private var contentString = Box<String>("")
+    private var contentString = Observable<String>("")
 
     init(modelProxy: ModelProxy?, textView: NSTextView) {
         contentString.bind {
@@ -21,6 +21,7 @@ class ViewModel {
 
     deinit {
         modelProxy?.delegates.remove(self)
+        contentString.unbind()
     }
 }
 

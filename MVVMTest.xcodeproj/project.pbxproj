@@ -19,7 +19,7 @@
 		00FD519028C6C38000AE36E9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD518F28C6C38000AE36E9 /* Model.swift */; };
 		00FD519428C6D4F500AE36E9 /* NSViewController+windowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD519328C6D4F500AE36E9 /* NSViewController+windowController.swift */; };
 		00FD519728C6F6EE00AE36E9 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD519628C6F6EE00AE36E9 /* MulticastDelegate.swift */; };
-		00FD519B28C7304500AE36E9 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD519A28C7304500AE36E9 /* Box.swift */; };
+		00FD519B28C7304500AE36E9 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD519A28C7304500AE36E9 /* Observable.swift */; };
 		00FD519D28C7306100AE36E9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD519C28C7306100AE36E9 /* ViewModel.swift */; };
 		6A9D04A63BD72AD209D679E3 /* libPods-MVVMTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A548CA280583EAE2B47678 /* libPods-MVVMTest.a */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,7 @@
 		00FD518F28C6C38000AE36E9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		00FD519328C6D4F500AE36E9 /* NSViewController+windowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSViewController+windowController.swift"; sourceTree = "<group>"; };
 		00FD519628C6F6EE00AE36E9 /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
-		00FD519A28C7304500AE36E9 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		00FD519A28C7304500AE36E9 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		00FD519C28C7306100AE36E9 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		01A548CA280583EAE2B47678 /* libPods-MVVMTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A38E9AC389B63E4602E9F8 /* Pods-MVVMTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTest.release.xcconfig"; path = "Target Support Files/Pods-MVVMTest/Pods-MVVMTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		00FD519528C6F6D000AE36E9 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				00FD519A28C7304500AE36E9 /* Box.swift */,
+				00FD519A28C7304500AE36E9 /* Observable.swift */,
 				00FD519628C6F6EE00AE36E9 /* MulticastDelegate.swift */,
 			);
 			path = Utility;
@@ -386,7 +386,7 @@
 				001DB93628C5E839006190FF /* XCAssets+Generated.swift in Sources */,
 				001DB91328C5E122006190FF /* AppDelegate.swift in Sources */,
 				00FD519728C6F6EE00AE36E9 /* MulticastDelegate.swift in Sources */,
-				00FD519B28C7304500AE36E9 /* Box.swift in Sources */,
+				00FD519B28C7304500AE36E9 /* Observable.swift in Sources */,
 				001DB91728C5E122006190FF /* Document.swift in Sources */,
 				00FD519028C6C38000AE36E9 /* Model.swift in Sources */,
 			);
