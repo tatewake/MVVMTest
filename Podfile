@@ -13,9 +13,10 @@ target 'MVVMTest' do
 end
 
 post_install do |installer|
-  installer.pods_project.targets.each do |target|
+    installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       config.build_settings.delete 'ARCHS'
+      config.build_settings['DEAD_CODE_STRIPPING'] = 'YES'
       if ['IBLinter', 'Periphery', 'SwiftGen'].include? target.name
         config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '12.3'
       end
